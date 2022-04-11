@@ -47,10 +47,9 @@ public class Main {
         // Dish pasta = new Dish("pasta", soupIngredients, DishType.mainDish);
         // order.addToOrder(pasta); // Throw exception
 
-
-        order.addToOrder(d1);
-        order.addToOrder(soup);
-        order.addToOrder(cake);
+        // TODO: Need to make sure only "valid" items are added (i.e., present on restaurant's menu)
+        order.addToOrder(menuA.getDesserts().get(0));
+        order.addToOrder(menuA.getSideDishes().get(0));
 
         System.out.println(order.getOrder());
         System.out.println(order.getTotal());

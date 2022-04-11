@@ -34,18 +34,6 @@ public class Order {
 
     public void addToOrder(MenuItem menuItem) {
         order.add(menuItem);
-        // TODO: Check that menuItem is possible to order at designated restaurant
-
-
-        // if(menuItem instanceof Drink)
-        //     menuItem = (Drink) menuItem;
-        // if(menuItem instanceof Dish)
-        //     menuItem = (Dish) menuItem;
-
-        // if(this.currentMenu.getDishes().contains(menuItem) || this.currentMenu.getDrinks().contains(menuItem))
-        //     order.add((MenuItem) menuItem);
-        // else
-        //     throw new IllegalArgumentException("Not a menu item at this restaurant.");
     }
 
 
