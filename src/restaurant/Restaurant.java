@@ -1,5 +1,7 @@
 package restaurant;
-import menu.Menu;
+
+import menu.*;
+import java.util.ArrayList;
 import main.Order;
 
 public class Restaurant {
@@ -33,16 +35,23 @@ public class Restaurant {
                     happyHour = true; // TODO
                 break;
         }
-        
 
 
+        ArrayList<Drink> drinks = this.menu.getDrinks(); // All drinks
+        for(Drink drink : drinks) {
+            drink.setPrice(drink.getPrice() * priceMultiplier);
+        }
 
 
-        // 1. do the copy of the initial menu
-        // modify the prices
-        return this.menu;
+        ArrayList<Dish> dishes = this.menu.getDishes(); // All dishes
+        for(Dish dish : dishes) {
+            dish.setPrice(dish.getPrice() * priceMultiplier);
+        }
+
+        return new Menu(drinks, dishes);
     }
 
-
-    //abstract double computePrice(int time,);
+    public boolean getHappyHour() {
+        return this.happyHour;
+    }
 }

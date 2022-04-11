@@ -13,6 +13,12 @@ public class Menu {
     }
 
 
+    public Menu(ArrayList<Drink> drinks, ArrayList<Dish> dishes) {
+        this.drinks = drinks;
+        this.dishes = dishes;
+    }
+
+
     public void addDrink(Drink drink) {
         this.drinks.add(drink);
     }
@@ -35,6 +41,11 @@ public class Menu {
 
     public ArrayList<Drink> getDrinks() {
         return this.drinks;
+    }
+
+
+    public ArrayList<Dish> getDishes() {
+        return this.dishes;
     }
 
 

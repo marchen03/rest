@@ -38,7 +38,9 @@ public class Main {
         menu.addDrink(d3);
 
         Restaurant restaurant = new Restaurant(RegisteredRests.A, menu);
+        Order order = new Order(10, true);
+        Menu menuA = restaurant.getCurrentMenu(order);
 
-        System.out.println(menu);
+        System.out.println(menuA);
     }
 }
