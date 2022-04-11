@@ -1,6 +1,7 @@
 package main;
 
 import menu.*;
+import restaurant.*;
 
 import java.util.ArrayList;
 
@@ -25,7 +26,7 @@ public class Main {
         cakeIngredients.add(nuts);
 
         ArrayList<Ingredient> soupIngredients = new ArrayList<>();
-        cakeIngredients.add(tomato);
+        soupIngredients.add(tomato);
 
         Dish cake = new Dish("cake", cakeIngredients, DishType.dessert);
         Dish soup = new Dish("soup", soupIngredients, DishType.sideDish);
@@ -35,6 +36,8 @@ public class Main {
         menu.addDrink(d1);
         menu.addDrink(d2);
         menu.addDrink(d3);
+
+        Restaurant restaurant = new Restaurant(RegisteredRests.A, menu);
 
         System.out.println(menu);
     }
