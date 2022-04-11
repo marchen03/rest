@@ -55,26 +55,26 @@ public class Menu {
 
     public String toString() {
         StringBuilder menu = new StringBuilder("Menu");
-        int counter = 0;
+        int counter = 1;
 
-        menu.append("\n\ndrinks");
+        menu.append("\n\nDrinks");
         for (Drink drink : this.drinks) {
             menu.append("\n").append(counter++).append(". ").append(drink);
         }
 
-        menu.append("\n\nsideDishes");
+        menu.append("\n\nSide Dishes");
         ArrayList<Dish> sideDishes = getDishesOfSpecificType(DishType.sideDish);
         for (Dish dish : sideDishes) {
             menu.append("\n").append(counter++).append(". ").append(dish);
         }
 
-        menu.append("\n\nmainDishes");
+        menu.append("\n\nMain Dishes");
         ArrayList<Dish> mainDishes = getDishesOfSpecificType(DishType.mainDish);
         for (Dish dish : mainDishes) {
             menu.append("\n").append(counter++).append(". ").append(dish);
         }
 
-        menu.append("\n\ndesserts");
+        menu.append("\n\nDesserts");
         ArrayList<Dish> desserts = getDishesOfSpecificType(DishType.dessert);
         for (Dish dish : desserts) {
             menu.append("\n").append(counter++).append(". ").append(dish);
