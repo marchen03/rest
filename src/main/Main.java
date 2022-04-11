@@ -37,10 +37,22 @@ public class Main {
         menu.addDrink(d2);
         menu.addDrink(d3);
 
+        // Adding new restaurant w/ menu
         Restaurant restaurant = new Restaurant(RegisteredRests.A, menu);
-        Order order = new Order(10, true);
+        // Creating order scenario: dine-in at 10:00
+        Order order = new Order(10, true, restaurant);
+        // Returns current menu prices of restaurant A
         Menu menuA = restaurant.getCurrentMenu(order);
 
-        System.out.println(menuA);
+        // Dish pasta = new Dish("pasta", soupIngredients, DishType.mainDish);
+        // order.addToOrder(pasta); // Throw exception
+
+
+        order.addToOrder(d1);
+        order.addToOrder(soup);
+        order.addToOrder(cake);
+
+        System.out.println(order.getOrder());
+        System.out.println(order.getTotal());
     }
 }

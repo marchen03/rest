@@ -32,18 +32,18 @@ public class Restaurant {
                 if(order.getDiningStatus())
                     priceMultiplier = 1.05; // 5% more expensive if eaten in
                 if(order.getHour() == 16 || order.getHour() == 17)
-                    happyHour = true; // TODO
+                    happyHour = true;
                 break;
         }
 
 
-        ArrayList<Drink> drinks = this.menu.getDrinks(); // All drinks
+        ArrayList<Drink> drinks = this.menu.copyOf().getDrinks(); // All drinks
         for(Drink drink : drinks) {
             drink.setPrice(drink.getPrice() * priceMultiplier);
         }
 
 
-        ArrayList<Dish> dishes = this.menu.getDishes(); // All dishes
+        ArrayList<Dish> dishes = this.menu.copyOf().getDishes(); // All dishes
         for(Dish dish : dishes) {
             dish.setPrice(dish.getPrice() * priceMultiplier);
         }
