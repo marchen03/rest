@@ -2,11 +2,6 @@ package menu;
 
 import java.util.ArrayList;
 
-
-/**
- * TODO display content
- * getDrinks(), getSideDishes(), getMainDishes(), getDesserts()
- */
 public class Menu {
 
     private final ArrayList<Drink> drinks;
@@ -36,6 +31,25 @@ public class Menu {
             }
         }
         return dishes;
+    }
+
+    public ArrayList<Drink> getDrinks() {
+        return this.drinks;
+    }
+
+
+    public ArrayList<Dish> getSideDishes() {
+        return getDishesOfSpecificType(DishType.sideDish);
+    }
+
+
+    public ArrayList<Dish> getMainDishes() {
+        return getDishesOfSpecificType(DishType.mainDish);
+    }
+
+
+    public ArrayList<Dish> getDesserts() {
+        return getDishesOfSpecificType(DishType.dessert);
     }
 
 
