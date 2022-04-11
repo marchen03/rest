@@ -9,7 +9,7 @@ public class Restaurant {
     private final RegisteredRests restaurantName;
     private final Menu menu;
     private double priceMultiplier = 1; // No change
-    private boolean happyHour = false;
+    private boolean happyHour = false; // TODO: Implementation
 
     public Restaurant(RegisteredRests restaurantName, Menu menu) {
         this.restaurantName = restaurantName;
